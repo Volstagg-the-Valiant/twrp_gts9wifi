@@ -32,3 +32,6 @@
 /init_boot          emmc      /dev/block/bootdevice/by-name/init_boot          flags=display=init_boot
 /vm-bootsys         ext4      /dev/block/bootdevice/by-name/vm-bootsys         flags=display=vm-bootsys
 /qweslicstore       emmc      /dev/block/bootdevice/by-name/qweslicstore       flags=display=qweslicstore
+# Removable storage
+/external_sd vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=storage;wipeingui;removable
+/usb-otg auto /dev/block/sda1 /dev/block/sda flags=display="USB-OTG";storage;wipeingui;removable
